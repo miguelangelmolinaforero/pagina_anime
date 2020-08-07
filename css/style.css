@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?ws4hfr');
+    src: url('../fonts/icomoon.eot?ws4hfr#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ws4hfr') format('truetype'), url('../fonts/icomoon.woff?ws4hfr') format('woff'), url('../fonts/icomoon.svg?ws4hfr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-house:before {
+    content: "\e902";
+}
+
+.icon-config:before {
+    content: "\c901";
+}
+
+.icon-heart:before {
+    content: "\e900";
+}
+
+.icon-fire:before {
+    content: "\f001";
+}
+
+
+/* hoja de estilos */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    /* grid-template-rows: 200px 1fr; */
+    /* border: 1px solid red; */
+    width: 100%;
+    grid-template-areas: "header header" "menu hero";
+}
+
+.item {
+    /* border: 1px solid red; */
+    height: auto;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows: 70px;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 5px 12px 0px rgb(206, 206, 206);
+    /* border: 1px solid red; */
+    /* height: 70px; */
+    /* overflow: hidden; */
+}
+
+.header input {
+    padding: 7px;
+    color: rgb(199, 199, 199);
+    font-family: 'poppins';
+    border-radius: 7px;
+    border: 1px solid;
+    width: 50%;
+}
+
+.user-id {
+    margin: 0px;
+    align-self: center;
+}
+
+.user {
+    display: flex;
+    justify-content: right;
+}
+
+.user img {
+    border-radius: 50%;
+    padding: 1.7px;
+    border: 2px solid gray;
+}
+
+.user figure {
+    margin: 15px;
+}
+
+.menu {
+    grid-area: menu;
+    display: block;
+    width: 100%;
+    background-color: rgb(255, 97, 97);
+    color: white;
+}
+
+.menu i {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 5px;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.option:last-child i {
+    margin-top: 600%;
+}
+
+.menu h5 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    grid-area: hero;
+    border-top: 1px solid gainsboro;
+    padding: 0 35px;
+    margin: 0px;
+    margin-bottom: 60px;
+}
+
+.anime-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 28px;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+
+.post-image {
+    margin: 0;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.post-overlay {
+    transition: 0.7s;
+    background: rgba(255, 77, 77, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65px;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay {
+    display: block;
+}
+
+.post-title {
+    margin: 10px 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: start;
+    display: block;
+}
+
+.post-comments {
+    margin: 10px 7px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: start;
+    display: block;
+}
+
+@media screen and (max-width:1024px) {
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 200px 1fr 300px;
+        grid-template-rows: 57px;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 5px 12px 0px rgb(206, 206, 206);
+        /* border: 1px solid red; */
+        /* height: 70px; */
+        /* overflow: hidden; */
+    }
+    .main-container {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        /* grid-template-rows: 200px 1fr; */
+        /* border: 1px solid red; */
+        width: 100%;
+        grid-template-areas: "header header" "menu hero";
+    }
+    .menu {
+        box-shadow: 0 5px 12px 0px rgb(206, 206, 206);
+    }
+    .menu i {
+        font-size: 22px;
+    }
+    .menu h5 {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .post-overlay {
+        top: 22px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        grid-template-columns: 170px 1fr 150px;
+        grid-template-rows: 65px;
+    }
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 65px 70px;
+        /* border: 1px solid red; */
+        width: 100%;
+        grid-template-areas: "header" "menu" "hero";
+    }
+    .user-id {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        font-size: 14px;
+        justify-content: space-evenly;
+    }
+    .hero {
+        grid-area: hero;
+        border-top: 1px solid gainsboro;
+        padding: 0 35px;
+        margin: 0px;
+        margin-bottom: 60px;
+    }
+    .anime-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        gap: 28px;
+    }
+    .option:last-child {
+        margin-top: -224px;
+    }
+    .option {
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width:645px) {
+    ime-list {
+        grid-template-columns: 1fr;
+    }
+    .anime-list {
+        grid-template-columns: 1fr;
+    }
+    .post-overlay {
+        top: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .main-container {
+        grid-template-rows: 137px;
+    }
+    .header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 65px 45px;
+        grid-template-areas: "logo profile" "search search";
+    }
+    .header img {
+        grid-area: logo;
+        width: auto;
+    }
+    .logo {
+        justify-self: self-end;
+    }
+    .user {
+        justify-self: center;
+        margin-right: 30px;
+    }
+    .user img {
+        grid-area: profile;
+    }
+    .header input {
+        grid-area: search;
+        padding: 10px 50px;
+    }
+    .hero {
+        padding: 10px;
+    }
+    .anime-list h2 {
+        font-size: 0.5em;
+    }
+    .post-overlay {
+        top: 25%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .post-title,
+    .post-comments {
+        font-size: .75em;
+    }
+}
